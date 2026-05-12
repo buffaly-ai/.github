@@ -53,3 +53,4 @@ Some domain packs, healthcare workflows, customer-specific connectors, deploymen
 ## Safety
 
 Do not include PHI, credentials, secrets, OAuth tokens, customer data, private logs, or confidential information in public issues, pull requests, discussions, examples, screenshots, or attachments.
+
