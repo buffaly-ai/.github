@@ -1,0 +1,27 @@
+name: Commercial licensing inquiry
+description: Ask about commercial licensing, proprietary use, redistribution, or supported deployment.
+title: "Commercial licensing: "
+labels: [commercial-licensing]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Buffaly core is GPLv3 by default. If your organization needs different terms for proprietary use, redistribution, or supported deployment, use this template. Do not include confidential details, PHI, secrets, credentials, or customer data.
+  - type: textarea
+    id: need
+    attributes:
+      label: What licensing need do you have?
+      description: Keep this high level and non-confidential.
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Proprietary use
+        - Redistribution
+        - Hosted product use
+        - Supported deployment
+        - Partner integration
+        - Other

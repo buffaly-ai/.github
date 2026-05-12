@@ -1,0 +1,21 @@
+name: Contribution proposal
+description: Propose a significant contribution before opening a large pull request.
+title: "Contribution proposal: "
+labels: [contribution]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Major external code contributions may require a CLA. Do not include PHI, credentials, secrets, customer data, or confidential information.
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What do you want to contribute and why?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Which repos/modules would be affected?

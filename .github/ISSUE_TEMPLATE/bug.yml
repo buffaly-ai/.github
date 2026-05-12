@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a reproducible issue in public Buffaly source.
+title: "Bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include PHI, credentials, secrets, customer data, private logs, or confidential information.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include only sanitized, non-sensitive examples.
+  - type: input
+    id: repo
+    attributes:
+      label: Repository/module
+      placeholder: buffaly-development, protoscript, ontology, etc.

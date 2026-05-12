@@ -1,0 +1,21 @@
+name: Documentation issue
+description: Report unclear docs, missing examples, terminology confusion, or setup friction.
+title: "Docs: "
+labels: [documentation]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Buffaly docs. Do not include PHI, credentials, secrets, customer data, or confidential information.
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is unclear or missing?
+      description: Describe the documentation gap.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What would have helped?
+      description: Tell us what explanation, example, or link you expected.
