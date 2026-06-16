@@ -4,6 +4,8 @@ Buffaly is a field-tested runtime for high-trust agents, developed by Matt Furna
 
 Buffaly focuses on typed actions, semantic entities, prototype graphs, provider modules, tool modules, and inspectable execution. The public source is available for inspection, debugging, plugin/tool development, partner integration, and LLM-assisted understanding.
 
+Buffaly is currently managed primarily by one developer while it is being opened up and moved forward at the same time. I am doing my best to make the source useful, buildable, and understandable as quickly as possible, but there is still work to do. Feedback is very welcome, especially around the build process, platform setup, and ways to make Buffaly easier to build and run across different environments.
+
 ## Start here
 
 If you are new to Buffaly:
@@ -20,7 +22,7 @@ If you are new to Buffaly:
 |---|---|
 | [protoscript](https://github.com/buffaly-ai/protoscript) | Executable language for prototype graphs, typed actions, ontology-native functions, parsing, interpretation, CLI validation, and workbench APIs. |
 | [ontology](https://github.com/buffaly-ai/ontology) | Prototype graph runtime with typed nodes, properties, child collections, TypeOf inheritance, parsing, tests, and simulation support. |
-| [buffaly-development](https://github.com/buffaly-ai/buffaly-development) | Main runtime source repository when public/available: agent host, typed tools, session services, web/worker hosts, ProtoScript integration, and embedded tool projects. |
+| [buffaly](https://github.com/buffaly-ai/buffaly) | Public Buffaly source monorepo, starting with the agent runtime export: agent host, typed tools, session services, web/worker hosts, ProtoScript integration, and embedded tool projects. |
 
 ## Provider and model integrations
 
