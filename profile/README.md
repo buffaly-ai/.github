@@ -4,55 +4,48 @@ Buffaly is a field-tested runtime for high-trust agents, developed by Matt Furna
 
 Buffaly focuses on typed actions, semantic entities, prototype graphs, provider modules, tool modules, and inspectable execution. The public source is available for inspection, debugging, plugin/tool development, partner integration, and LLM-assisted understanding.
 
-Buffaly is currently managed primarily by one developer while it is being opened up and moved forward at the same time. I am doing my best to make the source useful, buildable, and understandable as quickly as possible, but there is still work to do. Feedback is very welcome, especially around the build process, platform setup, and ways to make Buffaly easier to build and run across different environments.
-
 ## Start here
 
 If you are new to Buffaly:
 
 1. Read the docs: https://buffa.ly/docs
-2. Start with the runtime/source map.
-3. Understand the foundations: Ontology and ProtoScript.
-4. Inspect provider and tool modules to see how integrations are shaped.
-5. Use the installer/runtime package for the fastest normal setup path.
+2. Start with the [Agent Kit](https://github.com/buffaly-ai/agentkit) — the public reference implementation for embedding agent/tool loops in .NET applications.
+3. Understand the foundations: [Ontology](https://github.com/buffaly-ai/ontology) and [ProtoScript](https://github.com/buffaly-ai/protoscript).
+4. Use the [installer](https://github.com/buffaly-ai/buffaly-installer) for the fastest normal setup path.
+5. Browse [skills](https://github.com/buffaly-ai/buffaly-skills) for community and bundled skill packages.
 
-## Core repositories
+## Public repositories
 
 | Repository | What it is for |
 |---|---|
+| [agentkit](https://github.com/buffaly-ai/agentkit) | Buffaly Agent Kit 1.0 — a small headless .NET SDK for agent/tool loops with ProtoScript tool support and an optional ASP.NET inspector. This is the public reference implementation. |
 | [protoscript](https://github.com/buffaly-ai/protoscript) | Executable language for prototype graphs, typed actions, ontology-native functions, parsing, interpretation, CLI validation, and workbench APIs. |
 | [ontology](https://github.com/buffaly-ai/ontology) | Prototype graph runtime with typed nodes, properties, child collections, TypeOf inheritance, parsing, tests, and simulation support. |
-| [buffaly](https://github.com/buffaly-ai/buffaly) | Public Buffaly source monorepo, starting with the agent runtime export: agent host, typed tools, session services, web/worker hosts, ProtoScript integration, and embedded tool projects. |
+| [buffaly-installer](https://github.com/buffaly-ai/buffaly-installer) | Public installer releases for Buffaly runtime packages. |
+| [buffaly-skills](https://github.com/buffaly-ai/buffaly-skills) | Community and bundled skill packages for Buffaly agents. |
 
-## Provider and model integrations
+## Agent Kit
 
-| Repository | What it is for |
-|---|---|
-| [buffaly-providers](https://github.com/buffaly-ai/buffaly-providers) | Provider contracts and implementations for Anthropic, Gemini, xAI, plus a web harness for provider inspection. |
-| [buffaly-codex-embedded](https://github.com/buffaly-ai/buffaly-codex-embedded) | Windows-first embedded/web UI around Codex-style coding sessions, with core library, CLI, web host, and tests. |
+The [Buffaly Agent Kit](https://github.com/buffaly-ai/agentkit) is a frozen, one-time reference release that provides:
 
-## Tool and module examples
+- A headless agent/tool loop (`AgentKitRuntime`) that accepts any `IChatClient` provider
+- ProtoScript tool loading via explicit export manifests
+- An optional ASP.NET package with DI registration, JSONL persistence, and a static inspector
+- Three domain-specific samples (medical administration, commerce returns, DevOps incident investigation)
+- No production Buffaly dependencies, no SQL, no worker infrastructure
 
-| Repository | What it is for |
-|---|---|
-| [buffaly-tools-browser](https://github.com/buffaly-ai/buffaly-tools-browser) | Browser automation runtime, agent-facing browser tool, runner, skill wrapper, web harness, and tests. |
-| [buffaly-openai-computeruse](https://github.com/buffaly-ai/buffaly-openai-computeruse) | OpenAI computer-use integration with core contracts, runner, smoke project, tests, and web harness. |
-| [buffaly-openai-imagegeneration](https://github.com/buffaly-ai/buffaly-openai-imagegeneration) | OpenAI image generation integration with core facade, smoke project, module package, and web harness. |
-| [buffaly-sms](https://github.com/buffaly-ai/buffaly-sms) | Agent-facing SMS tool and tests, with external SMS provider credentials kept outside the repo. |
-| [buffaly-google-workspace](https://github.com/buffaly-ai/buffaly-google-workspace) | Google Workspace services for Gmail, Drive, Docs, Sheets, Calendar, Chat, OAuth flow, token storage boundaries, web module, and tests. |
-| [buffaly-xapi](https://github.com/buffaly-ai/buffaly-xapi) | .NET X API client library, CLI, and tests for auth signing, request behavior, posting, timelines, mentions, and search. |
+It is designed to be installed via `dotnet add package` into any .NET application.
 
 ## Licensing
 
 Buffaly core is GPLv3 by default. If your organization needs different terms for proprietary use, redistribution, or supported deployment, contact us for commercial licensing.
 
-Commercial licensing inquiries can be opened as GitHub issues using the `commercial-licensing` label/template.
+Commercial licensing inquiries can be opened as GitHub issues using the `commercial-licensing` label.
 
 ## What remains separate
 
-Some domain packs, healthcare workflows, customer-specific connectors, deployment assets, implementation playbooks, sensitive demos/data, and private operational configuration remain separate from the public core. More source may be opened over time as time allows.
+Some domain packs, healthcare workflows, customer-specific connectors, deployment assets, implementation playbooks, sensitive demos/data, and private operational configuration remain separate from the public core. Additional source repositories (providers, integrations, tools, and internal modules) are maintained privately.
 
 ## Safety
 
 Do not include PHI, credentials, secrets, OAuth tokens, customer data, private logs, or confidential information in public issues, pull requests, discussions, examples, screenshots, or attachments.
-
